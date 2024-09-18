@@ -20,8 +20,8 @@ function App() {
     const descontoUber = custoTotal * 0.15
     const multa = 150
   
-    const descontoTotal = descontoEmocional + descontoUber;
-    const custoFinal = custoTotal - descontoTotal + multa;
+    const descontoTotal = descontoEmocional + descontoUber
+    const custoFinal = custoTotal - descontoTotal + multa
   
     return {
       custoTotal: `R$ ${custoTotal}`,
