@@ -16,8 +16,8 @@ function App() {
     }
   
     const custoTotal = dias * taxaDiaria;
-    const descontoEmocional = custoTotal * (dias * 0.01); // desconto emocional em porcentagem do número de dias
-    const descontoUber = custoTotal * 0.15; // desconto Uber fixo em 15%
+    const descontoEmocional = custoTotal * (dias * 0.01); 
+    const descontoUber = custoTotal * 0.15; 
     const multa = 150;
   
     const descontoTotal = descontoEmocional + descontoUber;
