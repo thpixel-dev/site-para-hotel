@@ -2,23 +2,23 @@ import { useState } from 'react'
 import './App.css'
 
 function App() {
-  const [dias, setDias] = useState(0);
-  const [resultado, setResultado] = useState({});
+  const [dias, setDias] = useState(0)
+  const [resultado, setResultado] = useState({})
 
   function calcularCustoTotal(dias) {
     let taxaDiaria;
     if (dias <= 5) {
-      taxaDiaria = 100;
+      taxaDiaria = 100
     } else if (dias >= 6 && dias <= 10) {
-      taxaDiaria = 90;
+      taxaDiaria = 90
     } else {
-      taxaDiaria = 80;
+      taxaDiaria = 80
     }
   
     const custoTotal = dias * taxaDiaria;
-    const descontoEmocional = custoTotal * (dias * 0.01); 
-    const descontoUber = custoTotal * 0.15; 
-    const multa = 150;
+    const descontoEmocional = custoTotal * (dias * 0.01)
+    const descontoUber = custoTotal * 0.15
+    const multa = 150
   
     const descontoTotal = descontoEmocional + descontoUber;
     const custoFinal = custoTotal - descontoTotal + multa;
@@ -34,12 +34,12 @@ function App() {
   }
 
   function handleInputChange(event) {
-    setDias(event.target.value);
+    setDias(event.target.value)
   }
 
   function handleCalculateClick() {
-    const resultado = calcularCustoTotal(dias);
-    setResultado(resultado);
+    const resultado = calcularCustoTotal(dias)
+    setResultado(resultado)
   }
 
   return (
